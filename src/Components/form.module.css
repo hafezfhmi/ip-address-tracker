@@ -18,3 +18,7 @@
   margin-bottom: 2rem;
   outline: none;
 }
+
+.button:hover {
+  background-color: hsl(0, 0%, 17%);
+}
