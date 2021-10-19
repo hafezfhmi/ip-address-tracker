@@ -1,10 +1,12 @@
-import Form from './Form';
 import './app.css';
+import Body from './Components/Body';
+import Map from './Components/Map';
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <Body />
+      <Map />
     </div>
   );
 }
