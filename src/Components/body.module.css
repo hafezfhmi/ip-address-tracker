@@ -2,6 +2,10 @@
   height: 37vh;
   padding: 2.5rem;
   background-size: cover;
+
+  /* A hack to make the body to be above leaflet map. It works :) */
+  position: relative;
+  z-index: 99999;
 }
 
 .heading {
