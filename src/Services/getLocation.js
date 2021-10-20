@@ -17,13 +17,6 @@ const getData = (ip, domain) => {
         lat: response.data.location.lat,
         lng: response.data.location.lng,
       };
-    })
-    .catch((error) => {
-      if (error.response) {
-        console.log('Invalid IP address');
-      } else if (error.request) {
-        console.log('Disable adblock');
-      }
     });
 };
 

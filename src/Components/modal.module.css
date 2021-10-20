@@ -1,0 +1,52 @@
+.modalContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modalbg {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.errorCard {
+  width: 80vw;
+  max-width: 500px;
+  background-color: #fff;
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+}
+
+.modalClose {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 3rem;
+  border: none;
+  background-color: transparent;
+}
+
+.modalClose:hover {
+  cursor: pointer;
+}
+
+.errorHeader {
+  font-size: 2.8rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.errorDetail {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.border {
+  border-color: hsla(0, 0%, 59%, 0.5);
+}

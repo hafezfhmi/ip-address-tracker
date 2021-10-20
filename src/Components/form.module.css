@@ -26,6 +26,7 @@
 
 .button:hover {
   background-color: hsl(0, 0%, 17%);
+  cursor: pointer;
 }
 
 @media all and (min-width: 1200px) {

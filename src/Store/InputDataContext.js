@@ -17,6 +17,8 @@ export const InputDataProvider = (props) => {
     lat: '51.505',
     lng: '-0.09',
   });
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -26,9 +28,33 @@ export const InputDataProvider = (props) => {
 
     // Send as ip as dns if true and otherwise
     if (dnsRegex.test(ip)) {
-      sendRequest('', ip).then((data) => setData(data));
+      sendRequest('', ip)
+        .then((data) => setData(data))
+        .catch((error) => {
+          if (error.response) {
+            setError(true);
+            setErrorMessage(error.response.data.messages);
+            console.log(error.response.data.messages);
+          } else if (error.request) {
+            setError(true);
+            setErrorMessage('Disable adblock');
+            console.log('Disable adblock');
+          }
+        });
     } else {
-      sendRequest(ip, '').then((data) => setData(data));
+      sendRequest(ip, '')
+        .then((data) => setData(data))
+        .catch((error) => {
+          if (error.response) {
+            setError(true);
+            setErrorMessage(error.response.data.messages);
+            console.log(error.response.data.messages);
+          } else if (error.request) {
+            setError(true);
+            setErrorMessage('Disable adblock');
+            console.log('Disable adblock');
+          }
+        });
     }
   };
 
@@ -36,9 +62,22 @@ export const InputDataProvider = (props) => {
     setIp(event.target.value);
   };
 
+  const changeErrorHandler = (event) => {
+    event.preventDefault();
+    setError((prevState) => !prevState);
+  };
+
   return (
     <InputDataContext.Provider
-      value={{ submitHandler, inputHandler, ip, data }}
+      value={{
+        submitHandler,
+        inputHandler,
+        ip,
+        data,
+        error,
+        errorMessage,
+        changeErrorHandler,
+      }}
     >
       {props.children}
     </InputDataContext.Provider>
