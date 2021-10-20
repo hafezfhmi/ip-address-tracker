@@ -20,7 +20,16 @@ export const InputDataProvider = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    sendRequest().then((data) => setData(data));
+
+    // regex to check if there's a letter (means that it's a dns)
+    let dnsRegex = /[A-Za-z]/;
+
+    // Send as ip as dns if true and otherwise
+    if (dnsRegex.test(ip)) {
+      sendRequest('', ip).then((data) => setData(data));
+    } else {
+      sendRequest(ip, '').then((data) => setData(data));
+    }
   };
 
   const inputHandler = (event) => {

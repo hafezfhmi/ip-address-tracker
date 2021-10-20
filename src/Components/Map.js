@@ -20,8 +20,8 @@ const Map = () => {
 
   let myIcon = L.icon({
     iconUrl: '/images/icon-location.svg',
-    iconSize: [30, 55],
-    iconAnchor: [15, 55],
+    iconSize: [30, 45],
+    iconAnchor: [15, 45],
   });
 
   return (

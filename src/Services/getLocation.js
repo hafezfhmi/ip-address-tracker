@@ -1,13 +1,12 @@
 import axios from 'axios';
 
-const getData = () => {
-  let ip = '118.101.153.231';
+const getData = (ip, domain) => {
   let key = 'at_8cXCi7NYKafCc5vV8mWsntzrLGcUh';
 
   // We return axios request to further chain it in INputDataContext.js
   return axios
     .get(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=${key}&ipAddress=${ip}`
+      `https://geo.ipify.org/api/v2/country,city?apiKey=${key}&ipAddress=${ip}&domain=${domain}`
     )
     .then((response) => {
       return {
