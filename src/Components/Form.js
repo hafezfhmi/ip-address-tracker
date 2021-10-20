@@ -7,10 +7,17 @@ const Form = () => {
 
   return (
     <form onSubmit={ctx.submitHandler}>
-      <input type="text" className={styles.input} onChange={ctx.inputHandler} />
-      <button className={styles.button}>
-        <img src="/images/icon-arrow.svg" alt="Arrow icon" />
-      </button>
+      <div className={styles.buttonContainer}>
+        <input
+          type="text"
+          placeholder="Search for any IP address or domain"
+          className={styles.input}
+          onChange={ctx.inputHandler}
+        />
+        <button className={styles.button}>
+          <img src="/images/icon-arrow.svg" alt="Arrow icon" />
+        </button>
+      </div>
     </form>
   );
 };

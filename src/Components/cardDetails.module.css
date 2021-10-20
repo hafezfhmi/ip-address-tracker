@@ -14,3 +14,23 @@
 .card_Detail:not(:last-child) {
   margin-bottom: 2.3rem;
 }
+
+@media all and (min-width: 1200px) {
+  .detail_container {
+    width: 25%;
+    margin: 0 1.2rem;
+  }
+
+  .detail_container:not(:last-child) {
+    border-right: 1px solid hsla(0, 0%, 59%, 0.5);
+  }
+
+  .card_Header {
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .card_Detail {
+    font-size: 2.4rem;
+  }
+}

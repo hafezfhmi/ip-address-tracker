@@ -9,6 +9,11 @@
   outline: none;
 }
 
+.buttonContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .button {
   width: 16%;
   height: 6rem;
@@ -21,4 +26,19 @@
 
 .button:hover {
   background-color: hsl(0, 0%, 17%);
+}
+
+@media all and (min-width: 1200px) {
+  .buttonContainer {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+
+  .input {
+    width: 90%;
+  }
+
+  .button {
+    width: 10%;
+  }
 }
