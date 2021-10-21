@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Modal.module.css';
 import { UseinputDataContext } from '../Store/InputDataContext';
+import reactDom from 'react-dom';
 
 const ModalBG = ({ changeErrorHandler }) => {
   return <div className={styles.modalbg} onClick={changeErrorHandler}></div>;
@@ -23,13 +24,18 @@ const Modal = () => {
   const ctx = UseinputDataContext();
 
   return (
-    <div className={styles.modalContainer}>
-      <ModalBG changeErrorHandler={ctx.changeErrorHandler} />
-      <ModalCard
-        errorMessage={ctx.errorMessage}
-        changeErrorHandler={ctx.changeErrorHandler}
-      />
-    </div>
+    <>
+      {reactDom.createPortal(
+        <div className={styles.modalContainer}>
+          <ModalBG changeErrorHandler={ctx.changeErrorHandler} />
+          <ModalCard
+            errorMessage={ctx.errorMessage}
+            changeErrorHandler={ctx.changeErrorHandler}
+          />
+        </div>,
+        document.getElementById('errorModal')
+      )}
+    </>
   );
 };
 
