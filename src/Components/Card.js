@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './card.module.css';
+import styles from './Card.module.css';
 import CardDetails from './CardDetails';
 import { UseinputDataContext } from '../Store/InputDataContext';
 

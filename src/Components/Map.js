@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import styles from './map.module.css';
+import styles from './Map.module.css';
 import { UseinputDataContext } from '../Store/InputDataContext';
 
 // Updating the center position ref:

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './cardDetails.module.css';
+import styles from './CardDetails.module.css';
 
 const CardDetails = ({ header, detail }) => {
   return (

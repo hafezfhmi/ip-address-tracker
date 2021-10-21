@@ -1,4 +1,4 @@
-import './app.css';
+import './App.css';
 import Body from './Components/Body';
 import Map from './Components/Map';
 import { InputDataProvider } from './Store/InputDataContext';

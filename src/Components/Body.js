@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import Form from './Form';
-import styles from './body.module.css';
+import styles from './Body.module.css';
 
 const Body = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './form.module.css';
+import styles from './Form.module.css';
 import { UseinputDataContext } from '../Store/InputDataContext';
 import Modal from './Modal';
 
