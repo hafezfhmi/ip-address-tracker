@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const getData = (ip, domain) => {
-  let key = 'at_8cXCi7NYKafCc5vV8mWsntzrLGcUh';
+  let key = process.env.REACT_APP_API_KEY;
 
   // We return axios request to further chain it in INputDataContext.js
   return axios
