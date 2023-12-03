@@ -1,68 +1,53 @@
-# Frontend Mentor - IP address tracker solution
 
-This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+# ip address tracker
 
-## Table of contents
+An IP address tracker for a Frontend Mentor challenge 
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Reflection](#reflection)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+## Tech Stack
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+**Client:** React, React Leaflet
 
-## Overview
+## Run Locally
 
-### The challenge
+Clone the project
 
-Users should be able to:
+```bash
+  git clone https://github.com/hafezfhmi/ip-address-tracker.git
+```
 
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See their own IP address on the map on the initial page load
-- Search for any IP addresses or domains and see the key information and location
+Go to the project directory
 
-### Screenshot
+```bash
+  cd ip-address-tracker
+```
 
-![](./public/images/Capture.PNG)
-![](./public/images/Capture2.PNG)
+Make sure you are running node version 12.22.0
 
-### Links
+Install dependencies
 
-- Solution URL: [View](https://github.com/hafezfhmi/fem-ip-address-tracker)
-- Live Site URL: [View](https://easyiptracker.netlify.app/)
+```bash
+  npm install
+```
 
-## My process
+Fill environment variables in .env file
 
-### Built with
+Start the server
 
-- [React](https://reactjs.org/) - JS library
-- [React Leaflet](https://react-leaflet.js.org/) - JS Library for maps
-- [ipify API](https://www.ipify.org/) - A Simple Public Address API
+```bash
+  npm run start
+```
 
-### What I learned
+## Environment Variables
 
-- Develop using mobile-first approach
-- Utilizing context to manages state
-- Developing a project by consuming an API with axios
-- Using Leaflet library for interactive map
+To run this project, you will need to add the following environment variables to your .env file
 
-### Reflection
+`REACT_APP_API_KEY` (get from https://www.ipify.org)
 
-I still need a lot of practice in using React overall. While I'm getting better at the basics, the advanced aspects of React (useContext and other React hooks) needs more practice. The file structure also tends to be messy because of the numbers of css files. React styled components might help in future projects to clean up the project file structure.
+## Screenshots
 
-### Useful resources
+![App Screenshot](./public/images/Capture.PNG)
 
-- [React useContext hooks](https://www.youtube.com/watch?v=5LrDIWkK_Bc&t=649s) - Helped me in simplifying the usage of useContext hooks to manage my states.
-- [Updating React Leaflet center attributes](https://stackoverflow.com/questions/64665827/react-leaflet-center-attribute-does-not-change-when-the-center-state-changes) - Helped me to update the center of leaflet map when the state of latitude and longitude changed.
+## Demo
 
-## Author
+https://ip-address-tracker.hafezfhmi.com
 
-- Github - [Hafez Fahmi](https://github.com/hafezfhmi)
-- Frontend Mentor - [@hafezfhmi](https://www.frontendmentor.io/profile/hafezfhmi/solutions)
